@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+
+	<style>
+		body{
+			background-color: #edf5b0;
+		}
+	</style>
+
+</head>
+<body>
+
+	<h2 style="text-align: center;">Select your Movie</h2>
+
+	<h4 style="text-align: center;">Write your details and select the movie and seat type. It will automatically generate the price of that particular seat and will store the data in the table</h4>
+
+	<center>
+		<table border="3">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fname" id="fname"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Last Name</th>
+					<td><input type="text" name="lname" id="lname"></td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td><input type="text" name="email" id="email"></td>
+				</tr>
+				<tr>
+					<th>Age</th>
+					<td><input type="text" name="age" id="age"></td>
+				</tr>
+        <tr>
+          <tr>
+            <th>Phone</th>
+            <td><input type="text" name="phone" id="phone"></td>
+          </tr>
+          <tr>
+					<th>Movie Name</th>
+          <td>
+            <select id="movie">
+            <option>Black Panther</option>
+            <option>The Dark Knight</option>
+            <option>The Lion King</option>
+            <option>Matrix</option>
+            <option>Godzilla V/s Kong</option>
+            </select>
+          </td>
+				</tr>
+        <tr>
+					<th>Seat</th>
+          <td>
+            <select id="seat">
+              <option>Bronze</option>
+              <option>Silver</option>
+              <option>Gold</option>
+              <option>VIP</option>
+            </select>
+          </td>
+				</tr>
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="SUBMIT" onclick="submit(); document.getElementById('fname').value = ''; document.getElementById('email').value = ''; document.getElementById('lname').value = '';document.getElementById('age').value = ''; document.getElementById('phone').value = '';"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table border="4" id="show" style="margin-top: 50px;">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Age</th>
+          			<th>Phone Number</th>
+          			<th>Movie Name</th>
+          			<th>Seat</th>
+          			<th>Price</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+          			<th></th>
+          			<th></th>
+          			<th></th>
+          			<th id="price"></th>
+				</tr>
+			</thead>
+		</table>
+	</center>
+	
+<script src="index.js"></script>
+</body>
+</html>
